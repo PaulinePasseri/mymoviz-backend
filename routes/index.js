@@ -7,7 +7,7 @@ router.get('/movies', (req, res) => {
   fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${APIKEY}`)
   .then(response => response.json())
   .then(data => {
-    res.json({result: true, movies: data})
+    res.json({result: true, movies: data.results})
   })
 })
 
